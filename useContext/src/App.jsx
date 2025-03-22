@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { createContext } from 'react'
 import './App.css'
+import Child1 from './components/Child1';
+import { useState } from 'react';
+
+// Step :1create context
+const UserContext=createContext();
+
+//step:2 wrap al the child inside a provider
+
+//step:3 pass value 
+
+//step :4 consume k ander jaake consume karlo
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const[user,setUser]=useState({name:"ashwin"});
+  
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+  <UserContext.Provider value={user}>
+  <Child1/>
+  </UserContext.Provider>
+   
     </>
   )
 }
 
 export default App
+export {UserContext}
