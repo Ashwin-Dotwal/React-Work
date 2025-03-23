@@ -32,6 +32,14 @@ const router = createBrowserRouter([
     </div>
     
   }
+,
+  {
+    path:"/Student/:id",
+    element: <div>
+    <Navbar/>
+    <ParamComp/>
+  </div>
+  }
 ]);
 
 function App() {

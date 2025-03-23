@@ -8,14 +8,14 @@ import Buttton from './components/Buttton';
 function App() {
   const [count,setCount]=useState(0);
 
-  function handleclick(){
+  function handleClick(){
     setCount(count+1);
   }
  
 
   return (
     <div>
-      <Buttton handleclick={handleclick}text="click me" >
+      <Buttton handleClick={handleClick}text="click me" >
         <h1>{count}</h1>
       </Buttton>
     

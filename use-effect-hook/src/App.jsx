@@ -67,7 +67,7 @@ function handleClickTotal(){
 
   return (
    <div>
-<LoggerComponents/>
+{/*<LoggerComponents/>*/}
 
   {/*<button onClick={handleClick}>click me</button>
     <br />
