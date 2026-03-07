@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Card from "./Components/Card";
+import Nacbar from "./Components/Nacbar";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+    <div>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <h1>Ashwin</h1>
+
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          amet illo accusamus quam, aliquam ipsa temporibus eaque vel quisquam
+          eos debitis ex ad, velit tenetur porro, itaque aliquid iste iure.
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
 
-export default App
+      <div className="card">
+        <h1>Ashwin</h1>
+
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          amet illo accusamus quam, aliquam ipsa temporibus eaque vel quisquam
+          eos debitis ex ad, velit tenetur porro, itaque aliquid iste iure.
+        </p>
+      </div>
+
+      <Card />
+      <Nacbar />
+    </div>
+  );
+};
+
+export default App;
